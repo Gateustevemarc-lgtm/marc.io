@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html   lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <di id="header">
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <img src="images/FullLogo.png" class="logo">
+            </div>
+            <ul id="pl">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfoloi</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-text">
+            <p>Website Developer</p>
+            <h1>Hello, I am <span>Gateu</span><br> Steve Marc from ISTC</h1>
+          </div>
+        </div>
+    </di>
+    <div id="about">
+    <div class="container">
+        <div class="row">
+           <di class="about-col-1">
+            <img src="images/IMG_5691.JPG" class="ok ">
+           </di> 
+           <di class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+                My name is Gateu steve Marc. I am a student from Institut Superieur de Technology et de Commerce.
+                I am a student in software Engineering in Level 1. 
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Website</span><br>Developer</li>
+                <li><span>Software</span><br>Engineerer</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2025</span><br>Creation of an online platform for sale of dresses </li>
+                <li><span>2025</span><br>Still at school training</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2025</span><br>Software Engineering student at ISTC</li>
+                <li><span>2025</span><br>Software Engineering student at ISTC</li>
+              </ul>
+            </div>
+           </di>
+        </div>
+    </div>
+</div>
+<!---------services--------------->
+<div id="services">
+  <div class="container">
+     <h1 class="sub-title">My Services</h1>
+     <div class="services-list">
+      <di class="services-listn">
+       <h2>Website Developer</h2> 
+       <p>I develope various web sites for users</p>
+       <a href="#" id="pl">Learn more</a>
+      </di>
+      <di class="services-listn">
+       <h2>Software Engineerer</h2> 
+       <p>I am studying software Engineering at ISTC</p>
+       <a href="#" id="pl">Learn more</a>
+      </di>
+     </div>
+  </div>
+</div>
+<!---------------portfolio----------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/img.png" class="logo">
+        <div class="layer">
+         <h3>Home page of a selling of dress online</h3> 
+         <p>The web site enables you to view different types of 
+          dresses available in that store without you going out of your home.
+         </p>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="work">
+        <img src="images/img2.png" class="logo">
+        <h3>login page of a web site</h3>
+        <p>This is a login page of a web site which enables the user to enter his/her 
+          infomation in case he already registered on that web site.
+        </p>
+      </div>
+      </div>
+      <div class="layer">
+        <div class="work">
+        <img src="images/img3.png" class="logo">
+        <h3>Register page of a web site</h3>
+        <p>This is a register page of a web site that enables the user to record his/her information. </p>
+      </div> 
+      </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+  </div>
+</div>
+<!----------------contact----------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p>gateustevemarc@icloud.com</p>
+        <p>691711677</p>
+        <div class="social-icon">
+          <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+         <a href=""><i class="fa-brands fa-linkedin"></i></a>
+         <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a href="images/My CV.docx" download class="btn btn2">Dowload CV</a>
+      </div>
+      <form class="contact-right">
+        <div class="form-group">
+          <input type="text" placeholder="your name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="your email" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="your message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>copyright © 2025 Gateu Steve</p>
+  </div>
+</div>
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+  for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
+  for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+</script>
+</body>
+</html>
